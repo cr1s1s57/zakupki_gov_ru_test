@@ -27,6 +27,9 @@ public class MainClass {
         CryptoSignCheck crSing = new CryptoSignCheck(driver);
         // получение имени подписанта и кода электронной подписи
         crSing.getCryptoSign();
+        // полчучаем нужные данные по открытии каждого пункта из сформированного списка закупок
+        GetPurchaseInfo purchaseInfo = new GetPurchaseInfo(driver);
+        purchaseInfo.getUsePurchaseInfo();
         // закрыть браузер и выход
         driver.quit();
     }
